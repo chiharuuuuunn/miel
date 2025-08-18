@@ -36,9 +36,17 @@
         padding: 8px 16px;
     }
 
-    .nav-list ul {
+    .flex-inner-miel ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* ボタンが画面幅からはみ出した場合に折り返す */
         gap: 12px;
+        /* ボタン間の間隔を調整 */
+        padding: 0;
     }
+
+
 
     .sec-title {
         font-size: 40px;
@@ -119,6 +127,16 @@
     header .header-title {
         font-size: 22px;
     }
+
+
+    .flex-inner-miel ul {
+        flex-direction: column;
+        /* ボタンを縦に並べる */
+        align-items: center;
+        /* ボタンを中央に揃える */
+        gap: 10px;
+    }
+
 
     .hexagon-container {
         width: 100%;

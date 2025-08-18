@@ -242,39 +242,27 @@ h3 {
 
 .product-price-list {
   display: flex;
-  /* リスト全体をFlexboxコンテナにする */
   flex-direction: column;
-  /* 子要素を縦に並べる */
   gap: 10px;
-  /* アイテム間の隙間を10px空ける */
   margin-bottom: 40px;
   font-size: 28px;
-  /* ボタンとの距離を調整 */
 }
 
 .price-item {
   display: flex;
-  /* 個々のアイテムをFlexboxコンテナにする */
   justify-content: flex-start;
-  /* 左揃えにする */
   align-items: baseline;
-  /* ベースラインを揃える */
 }
 
 .price-item dt {
   width: 60px;
-  /* dt（重量）の幅を固定 */
   text-align: right;
-  /* dtのテキストを右揃えにする */
   padding-right: 80px;
-  /* ddとの間に余白を設ける */
 }
 
 .price-item dd {
   flex-grow: 1;
-  /* dd（価格）が残りのスペースを埋める */
   margin-left: 0;
-  /* ddのデフォルトマージンをリセット */
 }
 
 .btn-miel a {
@@ -541,8 +529,14 @@ footer .container.insta .insta-gallery video:hover {
     height: auto;
     padding: 8px 16px;
   }
-  .nav-list ul {
+  .flex-inner-miel ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* ボタンが画面幅からはみ出した場合に折り返す */
     gap: 12px;
+    /* ボタン間の間隔を調整 */
+    padding: 0;
   }
   .sec-title {
     font-size: 40px;
@@ -573,7 +567,6 @@ footer .container.insta .insta-gallery video:hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* 子要素を縦に並べる */
     align-items: center;
   }
   .btn-buy,
@@ -605,6 +598,13 @@ footer .container.insta .insta-gallery video:hover {
   }
   header .header-title {
     font-size: 22px;
+  }
+  .flex-inner-miel ul {
+    flex-direction: column;
+    /* ボタンを縦に並べる */
+    align-items: center;
+    /* ボタンを中央に揃える */
+    gap: 10px;
   }
   .hexagon-container {
     width: 100%;
