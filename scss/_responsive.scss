@@ -1,0 +1,205 @@
+@use "base/common" as *;
+// responsive
+
+
+@media (min-width: 1400px) {
+
+    .lavender-container {
+        left: 65%;
+        /* 一番左寄せ */
+    }
+
+    .lavender-container2 {
+        left: 62%;
+        /* 中央寄り */
+    }
+
+    .lavender-container3 {
+        left: 66%;
+        /* 右寄り */
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .lavender,
+    .lavender-container,
+    .lavender-container2,
+    .lavender-container3 {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        height: auto;
+        padding: 8px 16px;
+    }
+
+    .nav-list ul {
+        gap: 12px;
+    }
+
+    .sec-title {
+        font-size: 40px;
+    }
+
+    .container {
+        max-width: 920px;
+    }
+
+
+    .sec-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-inner {
+        width: 100%;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    .flex-inner-miel {
+        width: 80%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .product-name {
+        font-size: 28px;
+        width: auto; 
+        max-width: 420px; 
+        margin: 0 auto;
+    }
+
+    .btn-miel a {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .more a {
+
+        margin: 0 auto;
+    }
+
+
+}
+
+/* ===== Phone ↓ ===== */
+@media (max-width: 768px) {
+    header .nav-list .btn-buy a {
+        margin-top: 4px;
+    }
+
+    .sec-title {
+        font-size: 28px;
+    }
+
+    header .header-title {
+        font-size: 22px;
+    }
+
+    .hexagon-container {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        place-items: center;
+    }
+
+    .hexagon-shadow {
+        position: static !important;
+        width: 100% !important;
+        max-width: 320px;
+        transform: none !important;
+    }
+
+    .video1,
+    .video2,
+    .video3 {
+        position: static !important;
+        width: 100% !important;
+        top: auto;
+        left: auto;
+    }
+
+    #comprar .container.sec-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-inner-miel {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .btn-miel a {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .more a {
+
+        margin: 0 auto;
+    }
+
+    /* 六角形を隠す */
+    .video1,
+    .video2,
+    .video3 {
+        display: none;
+    }
+
+    /* 商品だけ表示 */
+    .hexagon-container {
+        width: 100%;
+        height: auto;
+        display: block;
+        text-align: center;
+    }
+
+    .hexagon-img {
+        margin: 12px auto 0;
+        max-width: 320px;
+    }
+
+    /* 装飾は非表示 */
+    .hexagon-wrapper1,
+    .hexagon-wrapper2 {
+        display: none;
+    }
+
+
+
+    footer .container.insta .insta-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem;
+        justify-content: center;
+    }
+
+    /* 正方形でキレイに並べる */
+    footer .container.insta .insta-gallery img,
+    footer .container.insta .insta-gallery video {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+
+
+// footer .insta-gallery img,
+// footer .insta-gallery video {
+//     width: 120px;
+//     height: 120px;
+// }
+
+
+// footer .insta-gallery {
+//     display: grid;
+//     grid-template-columns: repeat(2, 120px);
+// }

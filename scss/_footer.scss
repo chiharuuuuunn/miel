@@ -1,0 +1,64 @@
+@use "base/common" as *;
+
+footer {
+    position: relative;
+    padding: 3rem 1rem;
+    width: 100%;
+    text-align: center;
+
+    p {
+        font-size: 9px;
+        color: $dark-brown;
+        margin: 0.5rem auto;
+    }
+
+    a {
+        display: block;
+        font-size: 0.9rem;
+        color: $dark-brown;
+        text-decoration: none;
+        margin: 0.5rem auto;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #7b3f00;
+        }
+    }
+
+    .container.insta {
+        position: relative;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 16px;
+        text-align: center;
+
+        h2 {
+            font-size: 1.8rem;
+            color: #5c3a00;
+            margin-bottom: 1.5rem;
+        }
+
+        .insta-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 120px);
+            gap: 0.5rem;
+            justify-content: center;
+
+            img,
+            video {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px) scale(1.05);
+                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>API.NATIVA</title>
+    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header class="container sec-flex">
+        <h1 class="header-title"><a href="#">Apicultura Organica</a></h1>
+        <img class="header-logo" src="img/icon.png" alt="logo de Apicultura Organica">
+
+        <nav class="nav-list">
+            <ul>
+                <li class="btn-acerca"><a href="#acerca">ACERCA</a></li>
+                <li class="btn-contacto"><a href="#contacto">CONTACTO</a></li>
+                <li class="btn-buy"><a href="#comprar">COMPRAR</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- VR image -->
+    <video class="mainvisual" autoplay muted loop playsinline preload="metadata" aria-label="Segundo vídeo de abejas en flores">
+        <source src="img/mainvisual-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="gradation">
+        <main>
+            <!-- about and 3pics -->
+            <section id="acerca" class="container sec-flex">
+                <div class="hexagon-container">
+
+                    <div class="hexagon-shadow video1">
+                        <div class="hexagon-video">
+                            <video autoplay loop muted playsinline aria-label="Primer vídeo de abejas trabajando">
+                                <source src="img/bee-video1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="hexagon-shadow video2">
+                        <div class="hexagon-video">
+                            <video autoplay loop muted playsinline  aria-label="Segundo vídeo de abejas en flores">
+                                <source src="img/bee-video2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="hexagon-shadow video3">
+                        <div class="hexagon-video">
+                            <video autoplay loop muted playsinline aria-label="Tercer vídeo de abejas volando">
+                                <source src="img/bee-video3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex-inner">
+                    <h2 class="sec-title">ACERCA</h2>
+                    <h3>Miel casera</h3>
+                    <p>Miel Activa - Active Honey
+
+                        Miel de origen botanico poliflora.
+                        Capacidad Antimicrobiana y Antioxidante
+                        <br>
+                        Ingrdientes: Miel Natural de abejas 100%
+
+                        Duracion Indefinida
+                        <br>---------------------------------<br>
+                        de La serena
+                        <br>
+                        tel +56 9 9999 9999
+                    </p>
+                </div>
+            </section>
+
+            <!-- honey product -->
+            <section id="comprar">
+                <div class="container sec-flex">
+
+                    <div class="flex-inner-miel">
+                        <h2 class="sec-title">Miel</h2>
+                        <dl class="product-price-list">
+                            <div class="price-item">
+                                <dt>500g</dt>
+                                <dd>CLP 00,000</dd>
+                            </div>
+                            <div class="price-item">
+                                <dt>1kg</dt>
+                                <dd>CLP 00,000</dd>
+                            </div>
+                        </dl>
+
+                        <ul>
+                            <li class="btn-buy btn-miel"><a href="#contacto">COMPRAR</a></li>
+                            <li class="more"><a href="https://www.instagram.com/api.nativa.chile/"
+                                    target="_blank">quieres saber mas?</a></li>
+                        </ul>
+                    </div>
+
+
+                    <!-- honey pic -->
+                    <div class="hexagon-container">
+                        <div class="hexagon-img hexagon-shadow">
+                            <img src="img/honey.jpeg" alt="Frasco de miel dorada">
+                        </div>
+
+                        <div class="hexagon-wrapper1">
+                            <div class="hexagon-shape shape1"></div>
+                        </div>
+                        <div class="hexagon-wrapper2">
+                            <div class="hexagon-shape shape2"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="lavender-container">
+                <img src="img/lavender.png" class="lavender" alt="Ilustración de lavanda que se balancea"/>
+            </div>
+            <div class="lavender-container2">
+                <img src="img/lavender.png" class="lavender" alt="Ilustración de lavanda que se balancea"/>
+            </div>
+            <div class="lavender-container3">
+                <img src="img/lavender.png" class="lavender" alt="Ilustración de lavanda que se balancea"/>
+            </div>
+
+
+            <section id="contacto" class="container">
+                <h2 class="sec-title contact">Contacto</h2>
+                <form action="mail.php" method="post">
+                    <div class="tittle">
+                        <p>Nambre</p>
+                    </div>
+                    <div class="space">
+                        <input type="text" name="name">
+                    </div>
+
+                    <div class="tittle">
+                        <p>E-MAIL</p>
+                    </div>
+                    <div class="space">
+                        <input type="email" name="email">
+                    </div>
+
+                    <div class="tittle">
+                        <p>Tu mensaje</p>
+                    </div>
+                    <div class="space">
+                        <textarea name="message"
+                            placeholder="Si tienes alguna pregunta o mensaje, ingresa aqui"></textarea>
+                    </div>
+
+                    <div class="btn btn-send">
+                        <input class="contact-submit" type="submit" value="enviar">
+                    </div>
+                </form>
+            </section>
+
+
+            <footer>
+                <section class="container insta">
+                    <a href="https://www.instagram.com/api.nativa.chile/">
+                        <h2><span class="fa fa-instagram"></span>Instagram</h2>
+                        <div class="insta-gallery">
+                            <div class="insta-item"><img src="img/insta1.jpeg" alt="Imagen de colmena"></div>
+                            <div class="insta-item"><img src="img/insta2.jpeg" alt="Imagen de pan y miel"></div>
+                            <div class="insta-item"><img src="img/insta3.jpeg" alt="Imagen de tazón de miel"></div>
+                            <div class="insta-item"><video autoplay loop muted playsinline aria-label="Vídeo de abejas trabajando en flores">
+                                    <source src="img/insta4.mp4" type="video/mp4">
+                                </video></div>
+                            <div class="insta-item"><video autoplay loop muted playsinline aria-label="Vídeo de abejas en un entorno natural">
+                                    <source src="img/insta5.mp4" type="video/mp4">
+                                </video></div>
+                            <div class="insta-item"><img src="img/insta6.jpeg" alt="Imagen de miel con un servidor de madera"></div>
+                            <div class="insta-item"><video autoplay loop muted playsinline aria-label="Vídeo de abejas moviéndose en su hábitat">
+                                    <source src="img/insta8.mp4" type="video/mp4">
+                                </video></div>
+                            <div class="insta-item"><img src="img/insta7.jpeg"  alt="Imagen de un frasco de miel"></div>
+                        </div>
+                    </a>
+                    <a class="btn-insta" href="https://www.instagram.com/api.nativa.chile/" target="_blank">
+                    </a>
+
+                </section>
+                <p>© 2025 Miel Orgánica. Todos los derechos reservados.</p>
+                <p>Email: contacto@mielorganica.cl</p>
+            </footer>
+        </main>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/slick.js"></script> -->
+
+    <!-- cursor -->
+    <img src="img/bee-loading (3).png" alt="Bee" id="bee-cursor" />
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+@use "base/common" as *;
+
+
+// main-------------------
+// .loader {
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: $base;
+// }
+
+// .orbit {
+//     width: 200px;
+//     height: 200px;
+//     position: relative;
+//     animation: rotateOrbit 3s linear infinite;
+// }
+
+// .bee {
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     width: 80px;
+//     height: auto;
+//     transform: translateX(-50%);
+//     animation: counterRotate 3s linear infinite;
+// }
+
+// @keyframes rotateOrbit {
+//     from {
+//         transform: rotate(0deg);
+//     }
+
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }
+
+// @keyframes counterRotate {
+//     0% {
+//         transform: translateX(-50%) rotate(0deg);
+//     }
+
+//     100% {
+//         transform: translateX(-50%) rotate(-360deg);
+//     }
+// }
+
+// mainvisual
+.mainvisual {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+
+// 3 videos--------
+.hexagon {
+    &-container {
+        position: relative;
+        width: 60%;
+        height: 580px;
+        // border: 1px solid red;
+    }
+
+    &-shadow {
+        position: absolute;
+        filter: drop-shadow(0 4px 10px $text);
+        transition: transform 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &-video {
+        aspect-ratio: 1;
+        clip-path: polygon(50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%);
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 1px;
+        }
+    }
+}
+
+.video {
+    &1 {
+        width: 400px;
+        top: 0;
+        left: -100px;
+    }
+
+    &2 {
+        width: 300px;
+        top: 210px;
+        left: 150px;
+    }
+
+    &3 {
+        width: 200px;
+        top: -10px;
+        left: 300px;
+    }
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+//acerca-------------------
+
+.flex-inner-miel {
+    padding-left: 100px;
+    width: 60%;
+}
+
+.hexagon {
+    &-wrapper1 {
+        position: absolute;
+        filter: drop-shadow(4px 4px 8px $text);
+    }
+
+    &-wrapper2 {
+        position: absolute;
+        filter: drop-shadow(4px 4px 8px rgb(202, 200, 200));
+    }
+
+    &-img {
+        width: 300px;
+        aspect-ratio: 1;
+        overflow: hidden;
+        clip-path: polygon(50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%);
+        z-index: 10;
+        filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3));
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &-shape {
+        aspect-ratio: 1;
+        clip-path: polygon(50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%);
+        position: absolute;
+    }
+}
+
+.shape {
+    &1 {
+        background-color: $text;
+        width: 200px;
+        top: 100px;
+        right: -400px;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 8px 20px $text);
+        }
+    }
+
+    &2 {
+        background-color: rgb(202, 200, 200);
+        width: 100px;
+        top: 250px;
+        right: -310px;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 8px 20px rgb(187, 185, 185));
+        }
+    }
+}
+
+
+//miel-------------------
+.product {
+    &-name {
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 4.5em auto;
+        column-gap: .5em;
+        row-gap: .25em;
+        align-items: center;
+        min-height: 45px;
+
+
+        // 500g,1kg
+        .qty {
+            font-size: 18px;
+            text-align: left;
+            align-items: end;
+        }
+
+        .price {
+            text-align: left;
+            font-size: 40px;
+
+        }
+    }
+}
+
+.btn-miel a {
+    display: block;
+    padding: 8px 25px;
+    text-align: center;
+    width: 80%;
+
+}
+
+.more a {
+    color: rgb(140, 138, 138);
+    padding: 8px 25px;
+    background-color: rgb(202, 200, 200);
+    border: 3px solid transparent;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    width: 80%;
+
+    &:hover {
+        background-color: rgb(121, 121, 121);
+        border: 3px solid rgb(202, 200, 200);
+        color: white;
+    }
+
+    &:active {
+        transform: translateY(4px);
+        transition: transform 0.1s ease-in-out;
+        display: inline-block;
+    }
+}
+
+
+// contact------------------------
+#contacto {
+    position: relative;
+
+    .sec-title {
+        color: $dark-brown;
+    }
+}
+
+.contact {
+    text-align: center;
+}
+
+.space {
+    width: 100%;
+
+    & input {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        font-size: 13px;
+        border: 1px solid rgb(221, 219, 219);
+        background-color: $base;
+        opacity: 0.5;
+        background: url('../img/bg-hive-white.png') center/cover;
+    }
+}
+
+textarea {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid rgb(221, 219, 219);
+    background-color: $base;
+    opacity: 0.5;
+    background: url('../img/bg-hive-white.png') center/cover;
+}
+
+.btn-send {
+    text-align: center;
+}
+
+#contacto .contact-submit {
+    background-color: $dark-brown;
+    color: white;
+    width: 200px;
+    padding: 8px 25px;
+    margin-bottom: 20px;
+    border: 3px solid transparent;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: $text;
+        border: 3px solid $dark-brown;
+    }
+
+    &:active {
+        transform: translateY(4px);
+        transition: transform 0.1s ease-in-out;
+        display: inline-block;
+    }
+}
+
+/* 元の `.btn :hover` は子孫セレクタになってしまうため修正 */
+.contact-submit:hover {
+    background-color: $text;
+    border: 3px solid $dark-brown;
+}
+
+// lavender bg animation-----
+.lavender-container {
+    width: 300px;
+    left: 900px;
+    bottom: 0;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+    animation: sway 6s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.lavender-container2 {
+    width: 250px;
+    left: 850px;
+    bottom: -100px;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+    animation: sway 6s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.lavender-container3 {
+    width: 200px;
+    left: 900px;
+    bottom: -200px;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+    animation: sway 6s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.lavender {
+    opacity: 0.7;
+    position: absolute;
+    left: 0%;
+}
+
+.lavender:nth-child(even) {
+    animation-delay: 3s;
+}
+
+@keyframes sway {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+}
+
+.shapedividers_com-7963 {
+    overflow: hidden;
+    position: relative;
+}
+
+.shapedividers_com-7963::before {
+    content: '';
+    font-family: 'shape divider from ShapeDividers.com';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: 100% 90px;
+    background-position: 50% 0%;
+    background-image: url('data:image/svg+xml;charset=utf8,');
+}

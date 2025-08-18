@@ -1,0 +1,115 @@
+$base: rgb(245, 244, 244);
+// ベースカラー：主に背景 
+$dark-brown: rgb(68, 17, 17);
+// アクセントカラー：装飾色 
+$text: rgb(160, 129, 57);
+// アクセントカラー：主にテキストカラー 
+$honey: #f8d568;
+$brown: #8b4513;
+
+
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0 auto;
+    background-color: $base;
+
+    color: $dark-brown;
+    cursor: none !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+}
+
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/* これ超重要 */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sec-title {
+    color: $text;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.container {
+    align-items: center;
+    padding: 3%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.sec-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-inner {
+    width: 40%;
+}
+
+/* cursor */
+#bee-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.gradation {
+    background: linear-gradient(to bottom, $base, $text);
+}
+
+// .ball {
+//     position: absolute;
+//     border-radius: 50%;
+//     pointer-events: none;
+//     transform: translate(-50%, -50%);
+//     /* サイズや色は個別に設定 */
+// }
+
+// #ball1 {
+//     width: 30px;
+//     height: 30px;
+//     background: gray;
+//     z-index: 3;
+// }
+
+// #ball2 {
+//     width: 20px;
+//     height: 20px;
+//     background: #f2caf1;
+//     z-index: 2;
+// }
+
+// #ball3 {
+//     width: 12px;
+//     height: 12px;
+//     background: #db7134;
+//     z-index: 1;
+// }
