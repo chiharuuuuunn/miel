@@ -1,6 +1,6 @@
-@charset "UTF-8";
-@use "base/common" as *;
-@use './header' as header;
-@use './main' as main;
-@use './footer' as footer;
-@use './responsive' as responsive;
+// style.scss
+@use "base/common";
+@use "header";
+@use "main";
+@use "footer";
+@use "responsive";

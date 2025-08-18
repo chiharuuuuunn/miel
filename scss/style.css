@@ -237,24 +237,29 @@ h3 {
   filter: drop-shadow(0 8px 20px rgb(187, 185, 185));
 }
 
-.product-name {
-  margin-bottom: 20px;
-  display: grid;
-  grid-template-columns: 4.5em auto;
-  -moz-column-gap: 0.5em;
-       column-gap: 0.5em;
-  row-gap: 0.25em;
-  align-items: center;
-  min-height: 45px;
+.product-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+  font-size: 28px;
 }
-.product-name .qty {
-  font-size: 18px;
-  text-align: left;
-  align-items: end;
+
+.price-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
-.product-name .price {
-  text-align: left;
-  font-size: 40px;
+
+.price-item dt {
+  width: 60px;
+  text-align: right;
+  padding-right: 80px;
+}
+
+.price-item dd {
+  flex-grow: 1;
+  margin-left: 0;
 }
 
 .btn-miel a {
@@ -530,6 +535,22 @@ footer .container.insta .insta-gallery video:hover {
     width: 80%;
     padding-left: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-inner-miel ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-buy,
+  .more {
+    width: 80%;
+    margin: 0 auto;
   }
   .product-name {
     font-size: 28px;
@@ -578,17 +599,15 @@ footer .container.insta .insta-gallery video:hover {
     top: auto;
     left: auto;
   }
-  #comprar .container.sec-flex {
+  .container.sec-flex {
     flex-direction: column;
     align-items: center;
   }
   .flex-inner-miel {
-    width: 100%;
     padding-left: 0;
-    text-align: center;
   }
-  .price-item dt {
-    text-align: center;
+  .flex-inner-miel .product-price-list {
+    justify-content: center;
   }
   .btn-miel a {
     margin: 0 auto;

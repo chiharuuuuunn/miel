@@ -240,24 +240,41 @@ h3 {
   filter: drop-shadow(0 8px 20px rgb(187, 185, 185));
 }
 
-.product-name {
-  margin-bottom: 20px;
-  display: grid;
-  grid-template-columns: 4.5em auto;
-  -moz-column-gap: 0.5em;
-       column-gap: 0.5em;
-  row-gap: 0.25em;
-  align-items: center;
-  min-height: 45px;
+.product-price-list {
+  display: flex;
+  /* リスト全体をFlexboxコンテナにする */
+  flex-direction: column;
+  /* 子要素を縦に並べる */
+  gap: 10px;
+  /* アイテム間の隙間を10px空ける */
+  margin-bottom: 40px;
+  font-size: 28px;
+  /* ボタンとの距離を調整 */
 }
-.product-name .qty {
-  font-size: 18px;
-  text-align: left;
-  align-items: end;
+
+.price-item {
+  display: flex;
+  /* 個々のアイテムをFlexboxコンテナにする */
+  justify-content: flex-start;
+  /* 左揃えにする */
+  align-items: baseline;
+  /* ベースラインを揃える */
 }
-.product-name .price {
-  text-align: left;
-  font-size: 40px;
+
+.price-item dt {
+  width: 60px;
+  /* dt（重量）の幅を固定 */
+  text-align: right;
+  /* dtのテキストを右揃えにする */
+  padding-right: 80px;
+  /* ddとの間に余白を設ける */
+}
+
+.price-item dd {
+  flex-grow: 1;
+  /* dd（価格）が残りのスペースを埋める */
+  margin-left: 0;
+  /* ddのデフォルトマージンをリセット */
 }
 
 .btn-miel a {
@@ -546,6 +563,23 @@ footer .container.insta .insta-gallery video:hover {
     width: 80%;
     padding-left: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-inner-miel ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* 子要素を縦に並べる */
+    align-items: center;
+  }
+  .btn-buy,
+.more {
+    width: 80%;
+    margin: 0 auto;
   }
   .product-name {
     font-size: 28px;
@@ -594,17 +628,15 @@ footer .container.insta .insta-gallery video:hover {
     top: auto;
     left: auto;
   }
-  #comprar .container.sec-flex {
+  .container.sec-flex {
     flex-direction: column;
     align-items: center;
   }
   .flex-inner-miel {
-    width: 100%;
     padding-left: 0;
-    text-align: center;
   }
-  .price-item dt {
-    text-align: center;
+  .flex-inner-miel .product-price-list {
+    justify-content: center;
   }
   .btn-miel a {
     margin: 0 auto;

@@ -1,52 +1,5 @@
 @use "base/common" as *;
 
-
-// main-------------------
-// .loader {
-//     height: 100vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: $base;
-// }
-
-// .orbit {
-//     width: 200px;
-//     height: 200px;
-//     position: relative;
-//     animation: rotateOrbit 3s linear infinite;
-// }
-
-// .bee {
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     width: 80px;
-//     height: auto;
-//     transform: translateX(-50%);
-//     animation: counterRotate 3s linear infinite;
-// }
-
-// @keyframes rotateOrbit {
-//     from {
-//         transform: rotate(0deg);
-//     }
-
-//     to {
-//         transform: rotate(360deg);
-//     }
-// }
-
-// @keyframes counterRotate {
-//     0% {
-//         transform: translateX(-50%) rotate(0deg);
-//     }
-
-//     100% {
-//         transform: translateX(-50%) rotate(-360deg);
-//     }
-// }
-
 // mainvisual
 .mainvisual {
     width: 100%;
@@ -197,31 +150,31 @@ h3 {
 
 
 //miel-------------------
-.product {
-    &-name {
-        margin-bottom: 20px;
-        display: grid;
-        grid-template-columns: 4.5em auto;
-        column-gap: .5em;
-        row-gap: .25em;
-        align-items: center;
-        min-height: 45px;
-
-
-        // 500g,1kg
-        .qty {
-            font-size: 18px;
-            text-align: left;
-            align-items: end;
-        }
-
-        .price {
-            text-align: left;
-            font-size: 40px;
-
-        }
-    }
+.product-price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+    font-size: 28px;
 }
+
+.price-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.price-item dt {
+    width: 60px;
+    text-align: right;
+    padding-right: 80px;
+}
+
+.price-item dd {
+    flex-grow: 1;
+    margin-left: 0;
+}
+
 
 .btn-miel a {
     display: block;
