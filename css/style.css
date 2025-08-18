@@ -18,7 +18,6 @@ body {
   box-sizing: border-box;
 }
 
-/* これ超重要 */
 img,
 video {
   max-width: 100%;
@@ -502,6 +501,11 @@ footer .container.insta .insta-gallery video:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* PC用のスタイル（1024px以上） */
+.mainvisual source[data-type=gif] {
+  display: none;
+}
+
 @media (min-width: 1400px) {
   .lavender-container {
     left: 65%;
@@ -533,9 +537,7 @@ footer .container.insta .insta-gallery video:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* ボタンが画面幅からはみ出した場合に折り返す */
     gap: 12px;
-    /* ボタン間の間隔を調整 */
     padding: 0;
   }
   .sec-title {
@@ -601,10 +603,18 @@ footer .container.insta .insta-gallery video:hover {
   }
   .flex-inner-miel ul {
     flex-direction: column;
-    /* ボタンを縦に並べる */
     align-items: center;
-    /* ボタンを中央に揃える */
     gap: 10px;
+    margin-bottom: 10px;
+  }
+  .btn-buy a {
+    padding: 6px;
+  }
+  .mainvisual source[data-type=mp4] {
+    display: none;
+  }
+  .mainvisual source[data-type=mp4][data-type=gif] {
+    display: block;
   }
   .hexagon-container {
     width: 100%;
@@ -682,5 +692,17 @@ footer .container.insta .insta-gallery video {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+@media (max-width: 420px) {
+  .nav-list ul {
+    justify-content: center;
+    gap: 7px;
+  }
+  .nav-list li {
+    font-size: 14px;
+  }
+}
+.btn-buy a {
+  padding: 6px;
 }
 /*# sourceMappingURL=style.css.map */

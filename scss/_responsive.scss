@@ -1,6 +1,10 @@
 @use "base/common" as *;
-// responsive
 
+// responsive
+/* PC用のスタイル（1024px以上） */
+.mainvisual source[data-type="gif"] {
+    display: none;
+}
 
 @media (min-width: 1400px) {
 
@@ -40,13 +44,9 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        /* ボタンが画面幅からはみ出した場合に折り返す */
         gap: 12px;
-        /* ボタン間の間隔を調整 */
         padding: 0;
     }
-
-
 
     .sec-title {
         font-size: 40px;
@@ -128,15 +128,24 @@
         font-size: 22px;
     }
 
-
     .flex-inner-miel ul {
         flex-direction: column;
-        /* ボタンを縦に並べる */
         align-items: center;
-        /* ボタンを中央に揃える */
         gap: 10px;
+        margin-bottom: 10px;
     }
 
+    .btn-buy a {
+        padding: 6px;
+    }
+
+    .mainvisual source[data-type="mp4"] {
+        display: none;
+
+        &[data-type="gif"] {
+            display: block;
+        }
+    }
 
     .hexagon-container {
         width: 100%;
@@ -233,15 +242,17 @@
     }
 }
 
+@media (max-width: 420px) {
+    .nav-list ul {
+        justify-content: center;
+        gap: 7px;
+    }
 
-// footer .insta-gallery img,
-// footer .insta-gallery video {
-//     width: 120px;
-//     height: 120px;
-// }
+    .nav-list li {
+        font-size: 14px;
+    }
+}
 
-
-// footer .insta-gallery {
-//     display: grid;
-//     grid-template-columns: repeat(2, 120px);
-// }
+ .btn-buy a {
+        padding: 6px;
+    }
