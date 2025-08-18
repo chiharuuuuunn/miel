@@ -151,8 +151,7 @@ header {
 }
 .hexagon-video {
   aspect-ratio: 1;
-  -webkit-clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
-          clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
 }
 .hexagon-video video {
   width: 100%;
@@ -200,8 +199,7 @@ h3 {
   width: 300px;
   aspect-ratio: 1;
   overflow: hidden;
-  -webkit-clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
-          clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
   z-index: 10;
   filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3));
 }
@@ -214,8 +212,7 @@ h3 {
 }
 .hexagon-shape {
   aspect-ratio: 1;
-  -webkit-clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
-          clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
   position: absolute;
 }
 
@@ -363,8 +360,7 @@ textarea {
   pointer-events: none;
   position: relative;
   z-index: 1;
-  -webkit-animation: sway 6s ease-in-out infinite;
-          animation: sway 6s ease-in-out infinite;
+  animation: sway 6s ease-in-out infinite;
   transform-origin: bottom center;
 }
 
@@ -375,8 +371,7 @@ textarea {
   pointer-events: none;
   position: relative;
   z-index: 1;
-  -webkit-animation: sway 6s ease-in-out infinite;
-          animation: sway 6s ease-in-out infinite;
+  animation: sway 6s ease-in-out infinite;
   transform-origin: bottom center;
 }
 
@@ -387,8 +382,7 @@ textarea {
   pointer-events: none;
   position: relative;
   z-index: 1;
-  -webkit-animation: sway 6s ease-in-out infinite;
-          animation: sway 6s ease-in-out infinite;
+  animation: sway 6s ease-in-out infinite;
   transform-origin: bottom center;
 }
 
@@ -399,17 +393,7 @@ textarea {
 }
 
 .lavender:nth-child(even) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-@-webkit-keyframes sway {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(4deg);
-  }
+  animation-delay: 3s;
 }
 
 @keyframes sway {
@@ -513,9 +497,9 @@ footer .container.insta .insta-gallery video:hover {
 }
 @media (max-width: 1200px) {
   .lavender,
-.lavender-container,
-.lavender-container2,
-.lavender-container3 {
+  .lavender-container,
+  .lavender-container2,
+  .lavender-container3 {
     display: none;
   }
 }
@@ -587,8 +571,8 @@ footer .container.insta .insta-gallery video:hover {
     transform: none !important;
   }
   .video1,
-.video2,
-.video3 {
+  .video2,
+  .video3 {
     position: static !important;
     width: 100% !important;
     top: auto;
@@ -615,8 +599,8 @@ footer .container.insta .insta-gallery video:hover {
   }
   /* 六角形を隠す */
   .video1,
-.video2,
-.video3 {
+  .video2,
+  .video3 {
     display: none;
   }
   /* 商品だけ表示 */
@@ -632,7 +616,7 @@ footer .container.insta .insta-gallery video:hover {
   }
   /* 装飾は非表示 */
   .hexagon-wrapper1,
-.hexagon-wrapper2 {
+  .hexagon-wrapper2 {
     display: none;
   }
   footer .container.insta .insta-gallery {
@@ -643,12 +627,11 @@ footer .container.insta .insta-gallery video:hover {
   }
   /* 正方形でキレイに並べる */
   footer .container.insta .insta-gallery img,
-footer .container.insta .insta-gallery video {
+  footer .container.insta .insta-gallery video {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 1/1;
     -o-object-fit: cover;
        object-fit: cover;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

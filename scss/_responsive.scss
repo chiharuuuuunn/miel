@@ -68,8 +68,8 @@
 
     .product-name {
         font-size: 28px;
-        width: auto; 
-        max-width: 420px; 
+        width: auto;
+        max-width: 420px;
         margin: 0 auto;
     }
 
@@ -135,6 +135,11 @@
         padding-left: 0;
         text-align: center;
     }
+
+    .price-item dt {
+        text-align: center;
+    }
+
 
     .btn-miel a {
         margin: 0 auto;
