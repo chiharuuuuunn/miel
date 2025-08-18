@@ -33,7 +33,6 @@
     <!-- VR image -->
     <video class="mainvisual" autoplay muted loop playsinline preload="auto"
         aria-label="Segundo vídeo de abejas en flores">     
-        <source src="img/mainvisual-video.gif" type="image/gif" data-type="gif">
         <source src="img/mainvisual-video.mp4" type="video/mp4">
     </video>
 
@@ -211,13 +210,22 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <!-- <script src="js/slick.js"></script> -->
 
     <!-- cursor -->
-    <img src="img/bee-loading (3).png" alt="Bee" id="bee-cursor" />
+    <img src="img/bee-loading.png" alt="Bee" id="bee-cursor" />
 
 
-
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('.mainvisual');
+    if (video) {
+      video.play().catch(error => {
+        // オートプレイがブロックされた場合に、ユーザーに通知するなどの処理をここに書く
+        console.log("Autoplay was prevented by the browser.");
+      });
+    }
+  });
+</script>
 </body>
 
 </html>
