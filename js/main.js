@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 /*=================================================
  スムーススクロール
  ===================================================*/
@@ -17,8 +8,8 @@ $('a[href^="#"]').click(function () {
   let target = $(href == "#" || href == "" ? "html" : href);
   // ページトップからジャンプ先の要素までの距離を取得
   let position = target.offset().top;
-  // animateでスムーススクロールを行う   ページトップからpositionだけスクロールする
-  // 600はスクロール速度で単位はミリ秒  swingはイージングのひとつ
+  // animateでスムーススクロールを行う   ページトップからpositionだけスクロールする
+  // 600はスクロール速度で単位はミリ秒  swingはイージングのひとつ
   $("html, body").animate({ scrollTop: position }, 600, "swing");
   // urlが変化しないようにfalseを返す
   return false;
@@ -28,23 +19,23 @@ $('a[href^="#"]').click(function () {
 slick
 ===================================================*/
 // $(document).ready(function () {
-//   $(".slick-area").slick({
-//     arrows: false,
-//     centerMode: true,
-//     centerPadding: "60px",
-//     slidesToShow: 3,
-//     autoplay: true,
-//     autoplaySpeed: 1500,
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           centerPadding: "50px",
-//           slidesToShow: 1,
-//         },
-//       },
-//     ],
-//   });
+//   $(".slick-area").slick({
+//     arrows: false,
+//     centerMode: true,
+//     centerPadding: "60px",
+//     slidesToShow: 3,
+//     autoplay: true,
+//     autoplaySpeed: 1500,
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           centerPadding: "50px",
+//           slidesToShow: 1,
+//         },
+//       },
+//     ],
+//   });
 // });
 
 
@@ -71,19 +62,6 @@ $(window).scroll(function () {
 
 
 
-/*=================================================
-ローディング
-===================================================*/
-// window.addEventListener("load", function () {
-//   // 5秒後にローディング画面を非表示にする
-//   setTimeout(function () {
-//     const loader = document.querySelector(".loader");
-//     if (loader) loader.style.display = "none";
-
-//     // bodyにカーソル非表示を再適用（重要！）
-//     document.body.style.cursor = "none";
-//   }, 5000); // ← 5000ミリ秒 = 5秒
-// });
 
 
 
@@ -125,59 +103,20 @@ window.addEventListener("DOMContentLoaded", function () {
   animateBee();
 });
 
+/*=================================================
+動画の自動再生
+===================================================*/
+document.addEventListener('DOMContentLoaded', (event) => {
+  const mainVideo = document.querySelector('.mainvisual');
+  if (mainVideo) {
+    mainVideo.play();
+  }
 
-
-// マウスで掴む動き
-// document.addEventListener("DOMContentLoaded", function () {
-//   const slider = document.querySelector(".splide__list");
-//   const wrappers = document.querySelectorAll(".feed-box-wrapper");
-
-//   let startX = 0;
-
-//   slider.addEventListener("mousedown", (e) => {
-//     startX = e.clientX;
-//     slider.classList.add("is-grabbing");
-
-//     wrappers.forEach((wrapper) => {
-//       wrapper.classList.remove("is-active-left", "is-active-right");
-//     });
-
-//     const handleMouseMove = (e) => {
-//       const diffX = e.clientX - startX;
-
-//       wrappers.forEach((wrapper) => {
-//         wrapper.classList.remove("is-active-left", "is-active-right");
-//         if (diffX < -5) {
-//           wrapper.classList.add("is-active-left"); // 左へドラッグ
-//         } else if (diffX > 5) {
-//           wrapper.classList.add("is-active-right"); // 右へドラッグ
-//         }
-//       });
-//     };
-
-//     const handleMouseUp = () => {
-//       slider.classList.remove("is-grabbing");
-//       wrappers.forEach((wrapper) => {
-//         wrapper.classList.remove("is-active-left", "is-active-right");
-//       });
-
-//       document.removeEventListener("mousemove", handleMouseMove);
-//       document.removeEventListener("mouseup", handleMouseUp);
-//     };
-
-//     document.addEventListener("mousemove", handleMouseMove);
-//     document.addEventListener("mouseup", handleMouseUp);
-//   });
-// });
-
-
-
-
-
-
-
-
-
-
-
-
+  // 他の動画も同様に再生
+  const otherVideos = document.querySelectorAll('.hexagon-video video, .insta-gallery video');
+  otherVideos.forEach(video => {
+    if (video) {
+      video.play();
+    }
+  });
+});
