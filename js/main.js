@@ -38,21 +38,46 @@ $(window).scroll(function () {
 });
 
 
+
+/*=================================================
+ スムーススクロール
+ ===================================================*/
+$('a[href^="#"]').click(function () {
+  let href = $(this).attr("href");
+  let target = $(href == "#" || href == "" ? "html" : href);
+  let position = target.offset().top;
+  $("html, body").animate({ scrollTop: position }, 600, "swing");
+  return false;
+});
+
+/*=================================================
+スクロール時の画像フェード表示
+===================================================*/
+$(window).scroll(function () {
+  $(".card").each(function () {
+    let scroll = $(window).scrollTop();
+    let target = $(this).offset().top;
+    let windowHeight = $(window).height();
+    if (scroll > target - windowHeight + 200) {
+      $(this).css("opacity", "");
+      $(this).css("transform", "translateY()");
+    }
+  });
+});
+
 /*=================================================
  bee-cursor
  ===================================================*/
-window.addEventListener("DOMContentLoaded", function () {
+// DOMContentLoadedイベント内でbee-cursorの初期化とアニメーションを開始
+document.addEventListener("DOMContentLoaded", function () {
   const bee = document.getElementById("bee-cursor");
 
-  if (!bee) return; // 念のため：beeが存在しなければ終了
+  if (!bee) return;
 
   let mouseX = 0;
   let mouseY = 0;
   let beeX = 0;
   let beeY = 0;
-
-  const beeWidth = 60;
-  const beeHeight = 60;
 
   document.addEventListener("mousemove", function (e) {
     mouseX = e.clientX;
@@ -65,8 +90,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const angle = (mouseX - beeX) * 0.05;
 
-    bee.style.left = beeX - beeWidth / 2 + "px";
-    bee.style.top = beeY - beeHeight / 2 + "px";
+    bee.style.left = `${beeX}px`;
+    bee.style.top = `${beeY}px`;
     bee.style.transform = `rotate(${angle}deg)`;
 
     requestAnimationFrame(animateBee);
@@ -74,7 +99,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
   animateBee();
 });
-
 
 
 
