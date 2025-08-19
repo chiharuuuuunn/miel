@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 /*=================================================
  スムーススクロール
  ===================================================*/
@@ -14,6 +23,29 @@ $('a[href^="#"]').click(function () {
   // urlが変化しないようにfalseを返す
   return false;
 });
+
+/*=================================================
+slick
+===================================================*/
+// $(document).ready(function () {
+//   $(".slick-area").slick({
+//     arrows: false,
+//     centerMode: true,
+//     centerPadding: "60px",
+//     slidesToShow: 3,
+//     autoplay: true,
+//     autoplaySpeed: 1500,
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           centerPadding: "50px",
+//           slidesToShow: 1,
+//         },
+//       },
+//     ],
+//   });
+// });
 
 
 /*=================================================
@@ -40,44 +72,37 @@ $(window).scroll(function () {
 
 
 /*=================================================
- スムーススクロール
- ===================================================*/
-$('a[href^="#"]').click(function () {
-  let href = $(this).attr("href");
-  let target = $(href == "#" || href == "" ? "html" : href);
-  let position = target.offset().top;
-  $("html, body").animate({ scrollTop: position }, 600, "swing");
-  return false;
-});
-
-/*=================================================
-スクロール時の画像フェード表示
+ローディング
 ===================================================*/
-$(window).scroll(function () {
-  $(".card").each(function () {
-    let scroll = $(window).scrollTop();
-    let target = $(this).offset().top;
-    let windowHeight = $(window).height();
-    if (scroll > target - windowHeight + 200) {
-      $(this).css("opacity", "");
-      $(this).css("transform", "translateY()");
-    }
-  });
-});
+// window.addEventListener("load", function () {
+//   // 5秒後にローディング画面を非表示にする
+//   setTimeout(function () {
+//     const loader = document.querySelector(".loader");
+//     if (loader) loader.style.display = "none";
+
+//     // bodyにカーソル非表示を再適用（重要！）
+//     document.body.style.cursor = "none";
+//   }, 5000); // ← 5000ミリ秒 = 5秒
+// });
+
+
+
 
 /*=================================================
  bee-cursor
  ===================================================*/
-// DOMContentLoadedイベント内でbee-cursorの初期化とアニメーションを開始
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", function () {
   const bee = document.getElementById("bee-cursor");
 
-  if (!bee) return;
+  if (!bee) return; // 念のため：beeが存在しなければ終了
 
   let mouseX = 0;
   let mouseY = 0;
   let beeX = 0;
   let beeY = 0;
+
+  const beeWidth = 60;
+  const beeHeight = 60;
 
   document.addEventListener("mousemove", function (e) {
     mouseX = e.clientX;
@@ -90,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const angle = (mouseX - beeX) * 0.05;
 
-    bee.style.left = `${beeX}px`;
-    bee.style.top = `${beeY}px`;
+    bee.style.left = beeX - beeWidth / 2 + "px";
+    bee.style.top = beeY - beeHeight / 2 + "px";
     bee.style.transform = `rotate(${angle}deg)`;
 
     requestAnimationFrame(animateBee);
@@ -99,6 +124,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
   animateBee();
 });
+
+
+
+// マウスで掴む動き
+// document.addEventListener("DOMContentLoaded", function () {
+//   const slider = document.querySelector(".splide__list");
+//   const wrappers = document.querySelectorAll(".feed-box-wrapper");
+
+//   let startX = 0;
+
+//   slider.addEventListener("mousedown", (e) => {
+//     startX = e.clientX;
+//     slider.classList.add("is-grabbing");
+
+//     wrappers.forEach((wrapper) => {
+//       wrapper.classList.remove("is-active-left", "is-active-right");
+//     });
+
+//     const handleMouseMove = (e) => {
+//       const diffX = e.clientX - startX;
+
+//       wrappers.forEach((wrapper) => {
+//         wrapper.classList.remove("is-active-left", "is-active-right");
+//         if (diffX < -5) {
+//           wrapper.classList.add("is-active-left"); // 左へドラッグ
+//         } else if (diffX > 5) {
+//           wrapper.classList.add("is-active-right"); // 右へドラッグ
+//         }
+//       });
+//     };
+
+//     const handleMouseUp = () => {
+//       slider.classList.remove("is-grabbing");
+//       wrappers.forEach((wrapper) => {
+//         wrapper.classList.remove("is-active-left", "is-active-right");
+//       });
+
+//       document.removeEventListener("mousemove", handleMouseMove);
+//       document.removeEventListener("mouseup", handleMouseUp);
+//     };
+
+//     document.addEventListener("mousemove", handleMouseMove);
+//     document.addEventListener("mouseup", handleMouseUp);
+//   });
+// });
+
+
 
 
 
